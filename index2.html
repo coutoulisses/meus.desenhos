@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Galeria de Desenhos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    button {
+      padding: 8px 16px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    /* Modal */
+    #modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    #modal img {
+      max-width: 80%;
+      max-height: 80%;
+      border: 5px solid white;
+      border-radius: 10px;
+    }
+
+    #fechar {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #fechar:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Meus Desenhos</h1>
+
+  <table>
+    <tr>
+      <th>Personagem</th>
+      <th>Origem</th>
+      <th>Visualizar</th>
+    </tr>
+    <tr>
+      <td>2D</td>
+      <td>Gorillaz</td>
+      <td><button onclick="mostrarImagem('img/2D.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Android 18</td>
+      <td>Dragon Ball</td>
+      <td><button onclick="mostrarImagem('img/ANDROID18.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Avatar</td>
+      <td>Avatar</td>
+      <td><button onclick="mostrarImagem('img/AVATAR.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Barney</td>
+      <td>Flintstones</td>
+      <td><button onclick="mostrarImagem('img/BARNEY.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Capitão Caverna</td>
+      <td>Capitão Caverna</td>
+      <td><button onclick="mostrarImagem('img/CAPITÃO CAVERNA.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Chun-Li</td>
+      <td>Street Fighter</td>
+      <td><button onclick="mostrarImagem('img/CHUN-LI.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Coragem</td>
+      <td>O Cão Coragem</td>
+      <td><button onclick="mostrarImagem('img/CORAGEM.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Coringa</td>
+      <td>Batman: O Cavaleiro das Trevas</td>
+      <td><button onclick="mostrarImagem('img/CORINGA.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Dick Vigarista</td>
+      <td>Dick Vigarista</td>
+      <td><button onclick="mostrarImagem('img/DICK VIGARISTA.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Eric</td>
+      <td>Caverna do Dragão</td>
+      <td><button onclick="mostrarImagem('img/ERIC.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Eustácio</td>
+      <td>O Cão Coragem</td>
+      <td><button onclick="mostrarImagem('img/EUSTÁCIO.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Feiticeira Escarlate</td>
+      <td>Marvel Comics</td>
+      <td><button onclick="mostrarImagem('img/FEITICEIRA ESCARLATE.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Goku</td>
+      <td>Dragon Ball</td>
+      <td><button onclick="mostrarImagem('img/GOKU.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Hommer Simpson</td>
+      <td>Os Simpsons</td>
+      <td><button onclick="mostrarImagem('img/HOMMER SIMPSON.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Ikki</td>
+      <td>Cavaleiros do Zodíaco</td>
+      <td><button onclick="mostrarImagem('img/IKKI.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Jaspion</td>
+      <td>O Fantástico Jaspion</td>
+      <td><button onclick="mostrarImagem('img/JASPION.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Juggernaut</td>
+      <td>X-men</td>
+      <td><button onclick="mostrarImagem('img/JUGGERNAUT.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Knuckles</td>
+      <td>Sonic Team</td>
+      <td><button onclick="mostrarImagem('img/KNUCKLES.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Luffy</td>
+      <td>One Piece</td>
+      <td><button onclick="mostrarImagem('img/LUFFY.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Megaman</td>
+      <td>Megaman</td>
+      <td><button onclick="mostrarImagem('img/MEGAMAN.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Noturno</td>
+      <td>X-men</td>
+      <td><button onclick="mostrarImagem('img/NOTURNO.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Optimus Prime</td>
+      <td>Transformers</td>
+      <td><button onclick="mostrarImagem('img/OPTIMUS PRIME.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Panthro</td>
+      <td>Thundercats</td>
+      <td><button onclick="mostrarImagem('img/PANTHRO.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Popeye</td>
+      <td>Marinheiro Popeye</td>
+      <td><button onclick="mostrarImagem('img/POPEYE.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Puro Osso</td>
+      <td>Billy e Mandy</td>
+      <td><button onclick="mostrarImagem('img/PURO OSSO.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Quasímodo</td>
+      <td>O Corcunda de Notre Dame</td>
+      <td><button onclick="mostrarImagem('img/QUASÍMODO.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Robocop</td>
+      <td>Robocop - O Policial do Futuro</td>
+      <td><button onclick="mostrarImagem('img/ROBOCOP.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Shiryu</td>
+      <td>Cavaleiros do Zodíaco</td>
+      <td><button onclick="mostrarImagem('img/SHIRYU.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Shrek</td>
+      <td>Shrek</td>
+      <td><button onclick="mostrarImagem('img/SHREK.jpg')">Ver desenho</button></td>
+    </tr>
+    <tr>
+      <td>Taz</td>
+      <td>Demônio da Tazmânia</td>
+      <td><button onclick="mostrarImagem('img/TAZ1.jpg')">Ver desenho</button></td>
+    </tr> <tr>
+      <td>Taz</td>
+      <td>Demônio da Tazmânia</td>
+      <td><button onclick="mostrarImagem('img/TAZ2.jpg')">Ver desenho</button></td>
+    </tr> <tr>
+      <td>Usopp</td>
+      <td>One Piece</td>
+      <td><button onclick="mostrarImagem('img/USOPP.jpg')">Ver desenho</button></td>
+    </tr>
+    
+  </table>
+
+  <p style="margin-top: 30px;">Autor dos desenhos: Ulisses</p>
+
+  <div id="modal">
+    <img id="imagemModal" src="" alt="Desenho">
+    <button id="fechar" onclick="fecharModal()">Fechar</button>
+  </div>
+
+  <script>
+    function mostrarImagem(caminho) {
+      document.getElementById("imagemModal").src = caminho;
+      document.getElementById("modal").style.display = "flex";
+    }
+
+    function fecharModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

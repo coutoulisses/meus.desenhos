@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Meus Desenhos</title>
+  <style>
+    h1, h4, p {
+      text-align: center;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background-color: #121212;
+      color: #f4f4f4;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+
+  </style>
+</head>
+
+<body>
+  <button onclick="alternarTema()">Modo escuro</button>
+
+  <h1>Bem vindo ao meu 1º site!</h1>
+  <h4>📚 Sobre este site</h4><br>
+  <p>Este site foi desenvolvido como parte dos meus estudos na faculdade Uninter, onde estou aprendendo sobre 
+desenvolvimento web.<br> 
+— incluindo HTML, CSS e JavaScript. Ele é um exercício prático para aplicar o que venho estudando e testar diferentes ideias, recursos e estilos.<br>
+O conteúdo aqui não tem fins comerciais ou lucrativos e pode conter experimentos visuais, códigos em desenvolvimento e testes de funcionalidades.<br>
+Tudo isso faz parte do meu processo de aprendizado e evolução como desenvolvedor.
+<br>
+Agradeço por visitar e acompanhar essa jornada! 🚀</p>
+
+ <button onclick="window.location.href='index2.html'">Clique aqui!</button> 
+
+
+
+<p>🛡️ Aviso Legal<br>
+Este site apresenta trabalhos artísticos feitos à mão, criados com inspiração em personagens e imagens de terceiros.
+Todas as obras aqui expostas são de caráter não comercial, com o objetivo de expressão artística e estudo visual.
+Direitos Autorais.
+Todos os personagens, marcas, logotipos e imagens que possam ter servido de referência pertencem aos seus respectivos autores e detentores legais. Este site não reivindica propriedade sobre nenhum conteúdo protegido por direitos autorais de terceiros.
+Uso das Imagens.
+As ilustrações aqui exibidas são interpretações artísticas originais, sem intenção de reprodução exata ou uso comercial. Caso algum autor ou detentor de direitos deseje solicitar a remoção de conteúdo, entre em contato por meio do formulário disponível na seção “Contato”.
+Sem Fins Lucrativos
+Este site não possui anúncios, vendas ou qualquer forma de monetização direta ou indireta relacionada às obras publicadas.</p>
+<script>
+function alternarTema() {
+      document.body.classList.toggle("dark-mode");
+    }
+</script>
+</body>
+</html>
